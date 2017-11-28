@@ -14,6 +14,9 @@
     "name": "Aaron Williams",
     "url": "https://github.com/aceew"
   },
+  "engines": {
+    "node": "8.1.2"
+  },
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.7.5",
