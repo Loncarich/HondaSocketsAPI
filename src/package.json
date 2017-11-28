@@ -1,22 +1,14 @@
 {
   "name": "aws-lambda-boilerplate",
   "version": "0.0.1",
-  "description": "A simple nodejs4.3 aws lambda boilerplate",
-  "main": "index.js",
+  "description": "A simple node API",
+  "main": "server.js",
   "directories": {
     "test": "tests"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/aceew/aws-lambda-node-boilerplate.git"
-  },
   "scripts": {
     "test": "npm run-script lint && npm run-script unit",
-    "lint": "eslint {./*.js\\,./controllers/*.js\\,./models/*.js\\,./tests/*.js}",
-    "compile": "babel . --out-dir ../build --ignore='node_modules/**\\,coverage/**' --copy-files",
-    "unit": "babel-node ./node_modules/.bin/babel-istanbul cover ./node_modules/mocha/bin/_mocha -- tests/*.js",
-    "unit-es5": "mocha $(find tests -name '*.js')",
-    "deploy": "node-lambda deploy"
+    "start": "node server.js"
   },
   "author": {
     "name": "Aaron Williams",
@@ -43,6 +35,8 @@
     "sinon": "^1.17.3"
   },
   "dependencies": {
-    "babel-runtime": "^6.6.1"
+    "babel-runtime": "^6.6.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
   }
 }
